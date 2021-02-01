@@ -1,10 +1,12 @@
 import Head from 'next/head';
+import Link from 'next/link';
+import homeStyles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <p>
+      <h1 className={homeStyles.title}>Home</h1>
+      <p className={homeStyles.text}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus hic
         magni quisquam, asperiores doloremque in iure laboriosam nobis fuga quod
         rerum dolorum. Molestiae ipsum quia nisi iusto, aliquid qui sint, ullam
@@ -17,6 +19,9 @@ export default function Home() {
         quam in, rem, molestiae incidunt sunt tenetur enim voluptatem vero culpa
         ab voluptas? Magnam, vero?
       </p>
+      <Link href='/ninjas'>
+        <button className={homeStyles.btn}>See Ninja Listing</button>
+      </Link>
     </div>
   );
 }

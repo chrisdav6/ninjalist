@@ -6,12 +6,22 @@ const Navbar = () => {
   return (
     <nav className={navStyles.mainNav}>
       <div className={navStyles.logo}>
-        <h1>Ninja List</h1>
+        <h1>
+          <Link href='/'>
+            <a>Ninja List</a>
+          </Link>
+        </h1>
       </div>
 
-      <Link href='/'>Home</Link>
-      <Link href='/about'>About</Link>
-      <Link href='/ninjas'>Ninja Listing</Link>
+      <Link href='/'>
+        <a>Home</a>
+      </Link>
+      <Link href='/about'>
+        <a>About</a>
+      </Link>
+      <Link href='/ninjas'>
+        <a>Ninja Listing</a>
+      </Link>
     </nav>
   );
 };
