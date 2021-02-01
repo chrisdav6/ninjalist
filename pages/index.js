@@ -1,9 +1,12 @@
 import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <h1>Home</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus hic
@@ -18,6 +21,7 @@ export default function Home() {
         quam in, rem, molestiae incidunt sunt tenetur enim voluptatem vero culpa
         ab voluptas? Magnam, vero?
       </p>
+      <Footer />
     </div>
   );
 }
