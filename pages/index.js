@@ -5,6 +5,10 @@ import homeStyles from '../styles/Home.module.scss';
 export default function Home() {
   return (
     <div>
+      <Head>
+        <title>Ninja List | Home</title>
+        <meta name='keywords' content='ninjas' />
+      </Head>
       <h1 className={homeStyles.title}>Home</h1>
       <p className={homeStyles.text}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus hic
