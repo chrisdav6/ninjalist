@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import navStyles from '../styles/Navbar.module.scss';
 
@@ -8,19 +9,21 @@ const Navbar = () => {
       <div className={navStyles.logo}>
         <h1>
           <Link href='/'>
-            <a>Ninja List</a>
+            <a>
+              <Image src='/logo.png' alt='Logo' width={128} height={77} />
+            </a>
           </Link>
         </h1>
       </div>
 
       <Link href='/'>
-        <a>Home</a>
+        <a className={navStyles.link}>Home</a>
       </Link>
       <Link href='/about'>
-        <a>About</a>
+        <a className={navStyles.link}>About</a>
       </Link>
       <Link href='/ninjas'>
-        <a>Ninja Listing</a>
+        <a className={navStyles.link}>Ninja Listing</a>
       </Link>
     </nav>
   );
