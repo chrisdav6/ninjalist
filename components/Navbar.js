@@ -1,10 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import navStyles from '../styles/Navbar.module.scss';
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className='logo'>
+    <nav className={navStyles.mainNav}>
+      <div className={navStyles.logo}>
         <h1>Ninja List</h1>
       </div>
 
