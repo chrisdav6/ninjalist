@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import ninjaStyles from '../../styles/Ninjas.module.scss';
+import Link from 'next/link';
+import ninjasStyles from '../../styles/Ninjas.module.scss';
 
 export const getStaticProps = async () => {
   const res = await fetch('http://jsonplaceholder.typicode.com/users');
@@ -15,7 +16,7 @@ export const getStaticProps = async () => {
 
 const Ninjas = ({ ninjas }) => {
   return (
-    <div className={ninjaStyles.ninjas}>
+    <div className={ninjasStyles.ninjas}>
       <Head>
         <title>Ninja List | Ninjas</title>
         <meta name='keywords' content='ninjas' />
@@ -24,9 +25,11 @@ const Ninjas = ({ ninjas }) => {
 
       {ninjas.map(ninja => (
         <div key={ninja.id}>
-          <a className={ninjaStyles.single}>
-            <h3>{ninja.name}</h3>
-          </a>
+          <Link href={`/ninjas/${ninja.id}`}>
+            <a className={ninjasStyles.single}>
+              <h3>{ninja.name}</h3>
+            </a>
+          </Link>
         </div>
       ))}
     </div>
