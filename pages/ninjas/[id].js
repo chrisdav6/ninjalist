@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import ninjaStyles from '../../styles/Ninja.module.scss';
 
 export const getStaticProps = async context => {
